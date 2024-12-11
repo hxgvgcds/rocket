@@ -40,3 +40,30 @@ while player_y < 600:
                 keys[2] = False
             elif event.key == K_d:
                 keys[3] = False
+    
+    if  keys [0]:
+        if player_y > 0:
+            player_y -= 1
+        
+    elif keys [1]:
+        if player_x > 1:
+            player_x -= 1
+    
+    elif keys [2]:
+        if player_y < 600:
+            player_y += 1
+    
+    elif keys [3]:
+        if player_x < 600:
+            player_x += 1
+
+    player_y += 0.5
+    
+    
+
+text = font.render("game over", True,"blue")
+screen.blit(text, (300, 300))
+pygame.display.update()
+time.sleep(2)
+pygame.quit()
+print("gameover")
